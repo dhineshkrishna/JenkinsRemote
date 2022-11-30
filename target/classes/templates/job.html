@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>
+.welcome {
+background-color: light;
+ padding: 1px;
+  text-align: left;
+}
+</style>
+<body>
+	<h2>Spring Boot Thymeleaf</h2>
+
+	<table border="1" class="welcome">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>To Build</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="fromJsonArray : ${fromJsonArray}">
+				<td th:text="${fromJsonArray.name}"></td>
+				<td><BUTTON>Build</BUTTON></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
